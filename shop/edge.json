@@ -1,0 +1,31 @@
+{
+    "version": "1.0",
+    "envConfig": {
+        "test": {
+            "targetServers": [{
+                "name": "movies",
+                "host": "www.omdbapi.com",
+                "isEnabled": true,
+                "port": 80
+            }],
+            "caches": [{
+                "name": "movies",
+                "description": "movies cache",
+                "expirySettings": {
+                    "timeoutInSec": {
+                        "value": "300"
+                    },
+                    "valuesNull": false
+                }
+            }],
+            "kvms": [{
+                "name": "movies",
+                "entry": [{
+                        "name": "targetBasepath",
+                        "value": "/"
+                    }
+                ]
+            }]
+        }
+    }
+}
